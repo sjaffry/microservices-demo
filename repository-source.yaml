@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: microservices-demo-source
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  url: https://github.com/sjaffry/microservices-demo # ⚠️ Replace with your repository URL
+  ref:
+    branch: main # Or the name of the branch you want to monitor

@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: microservices-demo-app
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./kustomize/base
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: microservices-demo-source # This must match the name of the GitRepository you created
+  targetNamespace: default
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: frontend
+      namespace: default
+

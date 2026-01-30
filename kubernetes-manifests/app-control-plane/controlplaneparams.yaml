@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: GKENetworkParamSet
+metadata:
+  name: control-plane-params
+spec:
+  deviceMode: NetDevice
+  vpc: control-network
+  vpcSubnet: control-subnetwork-1
