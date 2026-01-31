@@ -10,9 +10,9 @@ spec:
   sourceRef:
     kind: GitRepository
     name: microservices-demo-source # This must match the name of the GitRepository you created
-  targetNamespace: web-store
+  targetNamespace: default
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
       name: frontend
-      namespace: web-store
+      namespace: default
