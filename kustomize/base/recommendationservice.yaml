@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: recommendationservice
+  namespace: web-store
   labels:
     app: recommendationservice
 spec:
@@ -73,6 +74,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: recommendationservice
+  namespace: web-store
   labels:
     app: recommendationservice
 spec:
@@ -87,4 +89,5 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  namespace: web-store
   name: recommendationservice

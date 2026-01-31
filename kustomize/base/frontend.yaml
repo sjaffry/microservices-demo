@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  namespace: web-store
   labels:
     app: frontend
 spec:
@@ -109,6 +110,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend
+  namespace: web-store
   labels:
     app: frontend
 spec:
@@ -123,6 +125,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: web-store
   name: frontend-external
   labels:
     app: frontend
@@ -138,4 +141,5 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  namespace: web-store
   name: frontend

@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: productcatalogservice
+  namespace: web-store
   labels:
     app: productcatalogservice
 spec:
@@ -69,6 +70,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: productcatalogservice
+  namespace: web-store
   labels:
     app: productcatalogservice
 spec:
@@ -83,4 +85,5 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  namespace: web-store
   name: productcatalogservice

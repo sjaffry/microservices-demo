@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cartservice
+  namespace: web-store
   labels:
     app: cartservice
 spec:
@@ -70,6 +71,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cartservice
+  namespace: web-store
   labels:
     app: cartservice
 spec:
@@ -84,12 +86,14 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  namespace: web-store
   name: cartservice
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-cart
+  namespace: web-store
   labels:
     app: redis-cart
 spec:
@@ -144,6 +148,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-cart
+  namespace: web-store
   labels:
     app: redis-cart
 spec:

@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: adservice
+  namespace: web-store
   labels:
     app: adservice
 spec:
@@ -72,6 +73,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: adservice
+  namespace: web-store
   labels:
     app: adservice
 spec:
@@ -87,3 +89,4 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: adservice
+  namespace: web-store
