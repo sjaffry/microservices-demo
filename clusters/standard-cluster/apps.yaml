@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: microservices-demo-source # This must match the name of the GitRepository you created
+    name: microservices-demo-source 
   targetNamespace: web-store
   healthChecks:
     - apiVersion: apps/v1
