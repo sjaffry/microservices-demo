@@ -25,3 +25,4 @@ resources:
 - productcatalogservice.yaml
 - recommendationservice.yaml
 - shippingservice.yaml
+- loadgenerator.yaml
